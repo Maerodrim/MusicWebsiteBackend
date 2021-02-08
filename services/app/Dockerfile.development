@@ -1,0 +1,6 @@
+FROM openjdk:14
+WORKDIR /usr/local/app
+ADD dima-0.0.1-SNAPSHOT.jar
+CMD java -jar ./app.jar
+
+
