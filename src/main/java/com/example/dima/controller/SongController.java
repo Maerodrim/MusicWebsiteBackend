@@ -30,7 +30,7 @@ public class SongController {
     }
 
     @GetMapping("/getSong")
-    public Set<Song> getSong(@RequestParam String name, @RequestParam String author, @RequestParam String album) {
+    public Song getSong(@RequestParam String name, @RequestParam String author, @RequestParam String album) {
         return songService.getSong(name, author, album);
     }
 }

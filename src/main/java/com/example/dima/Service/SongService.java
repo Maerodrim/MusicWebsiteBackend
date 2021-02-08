@@ -42,9 +42,7 @@ public class SongService {
         return songs;
     }
 
-    public Set<Song> getSong(String name, String author, String album) {
-        return new HashSet<Song>() {{
-            addAll(songRepository.findByNameAndAlbumAndAuthor(name, author, album));
-        }};
+    public Song getSong(String name, String author, String album) {
+        return songRepository.findByNameAndAlbumAndAuthor(name, author, album).get(0);
     }
 }
